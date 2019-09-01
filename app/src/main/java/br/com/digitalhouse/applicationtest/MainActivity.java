@@ -14,6 +14,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     TextView textView;
+    EditText editText;
     Button button;
     private EditText editTextNome;
 
@@ -22,11 +23,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = (TextView) findViewById(R.id.text_id);
-        button = (Button) findViewById(R.id.botao_main);
-        editTextNome = (EditText) findViewById(R.id.edit_text_nome);
+        textView = findViewById(R.id.text_id);
+        editText = findViewById(R.id.edit_text);
+        button = findViewById(R.id.button_id);
 
-        final Editable nome = editTextNome.getText();
+        final Editable nome = editText.getText();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
